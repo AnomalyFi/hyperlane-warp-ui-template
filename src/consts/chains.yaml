@@ -1,20 +1,22 @@
-# A map of chain names to ChainMetadata
-# Chains can be defined here, in chains.json, or in chains.ts
-# Chains already in the SDK need not be included here unless you want to override some fields
-# Schema here: https://github.com/hyperlane-xyz/hyperlane-monorepo/blob/main/typescript/sdk/src/metadata/chainMetadataTypes.ts
----
-# Example using local anvil chain:
-# anvil1:
-#   chainId: 31337
-#   domainId: 31337
-#   name: anvil1
-#   protocol: ethereum
-#   rpcUrls:
-#     - http: http://127.0.0.1:8545
-# anvil2:
-#   chainId: 31338
-#   domainId: 31338
-#   name: anvil2
-#   protocol: ethereum
-#   rpcUrls:
-#     - http: http://127.0.0.1:8555
+geth45205:
+  chainId: 45205
+  domainId: 45205
+  name: geth45205
+  nativeToken:
+    decimals: 18
+    name: Eth5
+    symbol: ETH
+  protocol: ethereum
+  rpcUrls:
+  - http: http://localhost:9095
+geth45206:
+  chainId: 45206
+  domainId: 45206
+  name: geth45206
+  nativeToken:
+    decimals: 18
+    name: Eth6
+    symbol: ETH
+  protocol: ethereum
+  rpcUrls:
+  - http: http://localhost:9096

@@ -2,23 +2,22 @@
 # Configs can be defined here, in tokens.json, or in tokens.ts
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens:
-  # Eth Mainnet HypNative token
-  - chainName: sepolia
+tokens: 
+  - chainName: geth45205
     standard: EvmHypNative
     decimals: 18
     symbol: ETH
     name: Ether
-    addressOrDenom: '0x767C51a91CC9dEF2F24C35c340649411D6390320'
+    addressOrDenom: '0x59b670e9fA9D0A427751Af201D676719a970857b'
     logoURI: '/logos/weth.png'
     connections:
-      - { token: ethereum|alfajores|0x8bF6Ca2Dca1DF703Cb9144cef6A4d86abA7776C4 }
-  - chainName: alfajores
+      - { token: ethereum|geth45206|0xc6e7DF5E7b4f2A278906862b61205850344D4e7d }
+  - chainName: geth45206
     standard: EvmHypSynthetic
     decimals: 18
     symbol: ETH
     name: Ether
-    addressOrDenom: '0x8bF6Ca2Dca1DF703Cb9144cef6A4d86abA7776C4'
+    addressOrDenom: '0xc6e7DF5E7b4f2A278906862b61205850344D4e7d'
     logoURI: '/logos/weth.png'
     connections:
-      - { token: ethereum|sepolia|0x767C51a91CC9dEF2F24C35c340649411D6390320 }
+      - { token: ethereum|geth45205|0x59b670e9fA9D0A427751Af201D676719a970857b }
