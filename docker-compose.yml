@@ -5,7 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - "$CHAIN_CONFIG:/app/src/consts/chains.yaml"
+      - "$TOKEN_CONFIG:/app/src/consts/tokens.yaml"
     ports:
-      - "$UI_PORT:3000"
+      - "$SERVER_PORT:3000"
     command: >
       yarn dev
+    environment:
+      - NEXT_PUBLIC_WALLET_CONNECT_ID=12345678901234567890123456789012
