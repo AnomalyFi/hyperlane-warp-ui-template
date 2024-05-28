@@ -1,10 +1,17 @@
 version: '3.4'
 
 services:
-  warpui:
+  build-warpui:
+    image: hyperlane-warp-ui
     build:
       context: .
       dockerfile: Dockerfile
+    command: ['echo', 'build completed']
+
+  warpui:
+    image: hyperlane-warp-ui
+    depends_on:
+      - build-warpui
     volumes:
       - "$CHAIN_CONFIG:/app/src/consts/chains.yaml"
       - "$TOKEN_CONFIG:/app/src/consts/tokens.yaml"
